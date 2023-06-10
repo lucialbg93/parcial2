@@ -1,10 +1,5 @@
 {
-    "build": [
-        {
-            "src": "/src/app.py",
-            "use": "@vercel/python"
-        }
-    ],
+    "buildCommand": "next build" ,
     "routes": [
         {
             "src": "/(.*)",
