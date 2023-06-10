@@ -45,7 +45,7 @@ jobs:
     name: vercel
     needs: [build]
     runs-on: ubuntu-latest
-    if: needs.build.result == 'fail'
+    if: needs.build.result == 'success'
     steps:
             - uses: actions/checkout@v2
             - name: Install Vercel CLI
