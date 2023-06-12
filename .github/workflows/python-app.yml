@@ -53,7 +53,7 @@ jobs:
       env:
          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       run: |
-            npx vercel --token ${VERCEL_TOKEN} --prod --yes lucialbg93
+            npx vercel --token ${VERCEL_TOKEN} --prod --yes src
             cd src
             echo "0" | python app.py
     
