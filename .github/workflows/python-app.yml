@@ -45,7 +45,6 @@ jobs:
     name: vercel
     needs: [build]
     runs-on: ubuntu-latest
-    if: needs.build.result == 'success'
     steps:
     - uses: actions/checkout@v2
     - name: Install Vercel CLI
@@ -54,7 +53,7 @@ jobs:
       env:
          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       run: |
-            npx vercel --token $VERCEL_TOKEN --prod --confirm lucialbg93
+            npx vercel --token ${VERCEL_TOKEN} --prod --confirm lucialbg93
             cd src
             echo "0" | python app.py
     
